@@ -1,11 +1,12 @@
 package com.willfp.ecoitems.compat
 
 import com.willfp.eco.core.Prerequisite
+import com.willfp.eco.core.proxy.ProxyConstants
 import com.willfp.libreforge.proxy.InvalidProxyException
 
 private const val BASE_PACKAGE = "com.willfp.ecoitems.compat.modern"
 private val isModern = Prerequisite.HAS_PAPER.isMet && Prerequisite.HAS_1_21.isMet
-
+private val isNewComponent = Prerequisite.HAS_1_21.isMet
 internal annotation class ModernCompatibilityProxy(
     val location: String
 )

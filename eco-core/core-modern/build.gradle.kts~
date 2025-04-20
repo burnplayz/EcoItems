@@ -2,12 +2,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 group = "com.willfp"
 version = rootProject.version
-repositories {
-    maven {
-        name = "CodeMC"
-        url = uri("https://repo.codemc.io/repository/maven-public/")
-    }
-}
+
 dependencies {
     compileOnly(project(":eco-core:core-plugin"))
     compileOnly("io.papermc.paper:paper-api:1.21.5-R0.1-SNAPSHOT")

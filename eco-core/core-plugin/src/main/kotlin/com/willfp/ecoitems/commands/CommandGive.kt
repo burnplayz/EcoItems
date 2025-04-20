@@ -28,7 +28,7 @@ class CommandGive(plugin: EcoPlugin) : Subcommand(plugin, "give", "ecoitems.comm
         val amount = args.getOrNull(2)?.toIntOrNull() ?: 1
 
         val message = plugin.langYml.getMessage("give-success")
-            .replace("%item%", ecoItem.id.key)
+            .replace("%item%", ecoItem!!.id.key)
             .replace("%recipient%", player.name)
 
         sender.sendMessage(message)
